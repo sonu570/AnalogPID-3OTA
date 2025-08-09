@@ -1,0 +1,31 @@
+
+
+.param val=100
+.lib ota.lib
+X1 6 4 3 21 ota
+X2 3 5 4 22 ota
+X3 6 0 5 23 ota
+X4 5 0 3 24 ota
+X5 0 1 1 25 ota
+X6 3 1 2 26 ota
+X7 2 0 1 27 ota
+X8 7 1 6 28 ota
+c1 5 0 18n  ic=0
+c2 4 0 10n  ic=0
+c3 1 0 20n  
+c4 2 0 1n  
+r 6 0 1k
+vin 7 0 pulse(0 50m 1p 1p 1p 1m 2m)
+vb1 0 21 dc 0.739	
+vb2 0 22 dc 0.72
+vb3 0 23 dc 0.66
+vb4 0 24 dc 0.70
+vb5 0 25 dc 0.85
+vb6 0 26 dc 0.85
+vb7 0 27 dc 0.6805
+vb8 0 28 dc 0.68
+*.step param val 0.825 0.830 0.001
+.tran 0 100u 0.0001u
+.op
+.probe
+.end
